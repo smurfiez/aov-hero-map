@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tier List — AoV ↔ 王者荣耀 Hero Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1020; --panel:#141a2e; --panel2:#1b2340; --line:#2a3554;
+  --txt:#eef1f9; --sub:#9aa6c4; --gold:#f5c542; --cyan:#4dd4e6;
+  --direct:#4dd4e6; --old:#f5c542; --loose:#b388ff; --original:#ff7a90;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 700px at 20% -10%,#1a2548 0%,transparent 60%),var(--bg);
+  color:var(--txt);font-family:"Segoe UI","Microsoft YaHei","Noto Sans CJK SC",sans-serif;}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+header{padding:34px 20px 18px;text-align:center;border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(77,212,230,.08),transparent);}
+h1{margin:0;font-size:30px;letter-spacing:1px;font-family:"Russo One","Segoe UI",sans-serif;font-weight:400}
+h1 small{display:block;font-size:13px;color:var(--sub);font-weight:400;margin-top:8px;letter-spacing:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.back{display:inline-block;margin-bottom:14px;color:var(--sub);text-decoration:none;font-size:13px}
+.back:hover{color:var(--cyan)}
+.trow{display:flex;gap:14px;margin-bottom:14px;align-items:stretch}
+.tlabel{flex:none;width:74px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:"Russo One","Segoe UI",sans-serif;font-size:30px;color:var(--tc);
+  background:color-mix(in srgb,var(--tc) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--tc) 40%,var(--line))}
+.tlabel small{font-size:10px;letter-spacing:1px;color:var(--sub);font-family:"Segoe UI",sans-serif;margin-top:2px}
+.tcells{flex:1;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start}
+.cell{display:flex;flex-direction:column;gap:2px;min-width:130px;padding:8px 12px;border-radius:10px;text-decoration:none;
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--tc);transition:.15s}
+.cell:hover{transform:translateY(-2px);border-color:var(--tc);background:var(--panel2)}
+.cname{font-weight:700;font-size:13px;color:var(--txt)}
+.cwzry{font-size:11px;color:var(--gold)}
+.cwzry.none{color:var(--original)}
+.creason{font-size:11px;color:var(--sub);line-height:1.45;margin-top:3px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+footer{text-align:center;color:var(--sub);font-size:12px;padding:30px 20px;border-top:1px solid var(--line);margin-top:30px}
+@media (max-width:540px){
+  .trow{flex-direction:column}
+  .tlabel{flex-direction:row;gap:10px;width:100%;padding:6px}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>AoV Tier List
+    <small id="sub">COMPLETE ROSTER</small>
+  </h1>
+</header>
+<div class="wrap">
+  <a class="back" href="index.html">← Back to roster</a>
+  <div id="rows"></div>
+</div>
+<footer>
+  Tier ratings are a reference point, not official — meta shifts; always check in-game data.<br>
+  Click a hero for details.
+</footer>
+
+<script src="heroes.js"></script>
+<script>
+const slug=h=>h.aov_name.toLowerCase().replace("'","").replace(" ","");
+const TIERS=[
+  ['S','var(--gold)','S-Tier'],
+  ['A','#7be38a','A-Tier'],
+  ['B','#7fb3ff','B-Tier'],
+  ['C','#b39bff','C-Tier'],
+  ['','var(--sub)','Unranked']
+];
+const rows=document.getElementById('rows');
+document.getElementById('sub').textContent=HEROES.length+' HEROES · CLICK A HERO FOR DETAILS';
+TIERS.forEach(([t,color,label])=>{
+  const list=HEROES.filter(h=>(h.tier||'')===t).sort((a,b)=>a.aov_name.localeCompare(b.aov_name));
+  if(!list.length) return;
+  const sec=document.createElement('section');
+  sec.className='trow';
+  sec.style.setProperty('--tc',color);
+  sec.innerHTML=
+    `<div class="tlabel">${t||'—'}<small>${label} · ${list.length}</small></div>
+     <div class="tcells">${list.map(h=>
+       `<a class="cell" href="hero.html?h=${slug(h)}" title="${(h.tier_reason||'').replace(/"/g,'&quot;')}">
+          <span class="cname">${h.aov_name}</span>
+          <span class="cwzry ${h.wzry_name==='—'?'none':''}">${h.wzry_name==='—'?'no WZRY':h.wzry_display}</span>
+          ${h.tier_reason?`<span class="creason">${h.tier_reason}</span>`:''}
+        </a>`).join('')||'<span style="color:var(--sub);font-size:13px">No heroes.</span>'}</div>`;
+  rows.appendChild(sec);
+});
+</script>
+</body>
+</html>

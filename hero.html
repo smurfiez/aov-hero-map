@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero — AoV ↔ 王者荣耀 Hero Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1020; --panel:#141a2e; --panel2:#1b2340; --line:#2a3554;
+  --txt:#eef1f9; --sub:#9aa6c4; --gold:#f5c542; --cyan:#4dd4e6;
+  --direct:#4dd4e6; --old:#f5c542; --loose:#b388ff; --original:#ff7a90;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 700px at 20% -10%,#1a2548 0%,transparent 60%),var(--bg);
+  color:var(--txt);font-family:"Segoe UI","Microsoft YaHei","Noto Sans CJK SC",sans-serif;}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+.wrap{max-width:720px;margin:0 auto;padding:24px 20px 40px}
+.back{display:inline-block;margin-bottom:14px;color:var(--sub);text-decoration:none;font-size:13px}
+.back:hover{color:var(--cyan)}
+.hcard{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);
+  border-radius:16px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.mtop{display:flex;gap:18px;align-items:center}
+.mimg{width:140px;height:140px;border-radius:14px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:52px;font-weight:800;color:#0b1020;background:linear-gradient(135deg,var(--cyan),#2a8b9a);
+  border:2px solid rgba(255,255,255,.15)}
+.mimg img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.mname{font-size:26px;font-weight:800;font-family:"Russo One","Segoe UI",sans-serif}
+.mcn{color:var(--sub);font-size:14px;margin-top:4px}
+.mcn .py{color:var(--sub);opacity:.85;font-size:12px}
+.mrow{margin-top:18px;display:grid;grid-template-columns:110px 1fr;gap:6px 12px;font-size:14px}
+.mrow .k{color:var(--sub);font-size:12px;text-transform:uppercase;letter-spacing:1px;padding-top:2px}
+.mrow .v{color:var(--txt)}
+.mrow .v b{color:var(--gold)}
+.wpy{color:var(--sub);opacity:.85;font-size:11px;font-weight:400}
+.mrow .wpy{font-size:12px}
+.mtier{display:inline-block;padding:2px 10px;border-radius:10px;font-weight:800;font-size:13px;background:rgba(255,255,255,.08)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.mnote{margin-top:14px;padding:10px 12px;border-radius:10px;background:rgba(77,212,230,.07);
+  border:1px solid rgba(77,212,230,.18);color:var(--sub);font-size:13px;line-height:1.5}
+.mnote a{color:var(--cyan)}
+.msec{margin-top:22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--sub)}
+.mskill{margin-top:8px;padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px}
+.mskill.passive{border-style:dashed}
+.msk-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px}
+.msk-name{font-weight:700;display:flex;align-items:center;gap:8px}
+.msk-ico{width:34px;height:34px;border-radius:6px;object-fit:cover;flex:none;border:1px solid var(--line)}
+.msk-meta{color:var(--sub);font-size:11px;white-space:nowrap}
+.msk-desc{color:var(--sub);font-size:12px;line-height:1.5;margin-top:5px}
+.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:6px;vertical-align:middle}
+.b-direct{background:rgba(77,212,230,.18);color:var(--direct)}
+.b-old{background:rgba(245,197,66,.18);color:var(--old)}
+.b-loose{background:rgba(179,136,255,.18);color:var(--loose)}
+.b-original{background:rgba(255,122,144,.18);color:var(--original)}
+footer{text-align:center;color:var(--sub);font-size:12px;padding:30px 20px}
+@media (max-width:540px){
+  .mtop{flex-direction:column;align-items:flex-start}
+  .mname{font-size:20px}
+  .mrow{grid-template-columns:90px 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← Back to roster</a>
+  <div class="hcard" id="card"></div>
+</div>
+<footer>
+  Built for a WZRY player crossing over to Arena of Valor. Mapping type = direct / old-version / loose / original.<br>
+  Tier ratings are a reference point, not official — meta shifts; always check in-game data.
+</footer>
+
+<script src="heroes.js"></script>
+<script src="skills.js" onerror="window.SKILLS={}"></script>
+<script>
+const MAPPING_DESC={
+  direct:"Same kit, renamed model — plays just like the WZRY hero.",
+  old:"Matches the pre-rework WZRY hero — the kit changed in Honor of Kings, this is the old version.",
+  loose:"Similar vibe/mechanics, not a 1:1 clone — expect to relearn details.",
+  original:"AoV original — no WZRY counterpart, nothing to transfer from."
+};
+function initials(n){ return n.charAt(0).toUpperCase(); }
+const slug=new URLSearchParams(location.search).get('h')||'';
+const h=HEROES.find(x=>x.aov_name.toLowerCase().replace("'","").replace(" ","")===slug);
+const card=document.getElementById('card');
+if(!h){
+  card.innerHTML='<div class="mnote">Hero not found — <a href="index.html">back to roster</a>.</div>';
+}else{
+  document.title=h.aov_name+' — AoV ↔ 王者荣耀 Hero Map';
+  const wzry = h.wzry_name==='—'
+    ? `<b style="color:var(--original)">No WZRY counterpart</b>`
+    : `<b>${h.wzry_display}</b>${h.wzry_pinyin?` <span class="wpy">${h.wzry_pinyin}</span>`:''}`;
+  const sk=(typeof SKILLS!=='undefined'&&SKILLS)?SKILLS[slug]:null;
+  let skills;
+  if(sk&&sk.skills&&sk.skills.length){
+    skills=sk.skills.map(s=>{
+      const types=(s.types||[]).filter(t=>!t.toLowerCase().startsWith('passive'));
+      const meta=s.passive?('Passive'+(types.length?' · '+types.join(' · '):'')):
+                  [s.mana?s.mana+' mana':'',s.cd?s.cd+'s CD':'',types.join(' · ')].filter(Boolean).join(' · ');
+      const ico=s.icon?`<img class="msk-ico" src="${s.icon}" alt="" onerror="this.style.display='none'">`:'';
+      return `<div class="mskill${s.passive?' passive':''}"><div class="msk-head">`+
+        `<span class="msk-name">${ico}${s.name}</span><span class="msk-meta">${meta}</span></div>`+
+        (s.desc?`<div class="msk-desc">${s.desc}</div>`:'')+'</div>';
+    }).join('');
+  }else{
+    skills='<div class="mnote">No skill data on the wiki for this hero.</div>';
+  }
+  card.innerHTML=
+    `<div class="mtop">
+       <div class="mimg"><img src="${h.image}" alt="${h.aov_name} portrait"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+         <span style="display:none">${initials(h.aov_name)}</span></div>
+       <div>
+         <div class="mname">${h.aov_name}<span class="badge b-${h.mapping_type}">${h.mapping_type}</span></div>
+         <div class="mcn">${h.aov_cn} <span class="py">${h.pinyin}</span></div>
+       </div>
+     </div>
+     <div class="mrow">
+       <span class="k">WZRY hero</span><span class="v">${wzry}</span>
+       <span class="k">Role</span><span class="v">${h.role} · ${h.lane}</span>
+       <span class="k">Tier</span><span class="v"><span class="mtier"><i class="dot" style="background:${h.tier==='S'?'var(--gold)':h.tier==='A'?'#7be38a':h.tier==='B'?'#7fb3ff':'#b39bff'};margin-right:6px"></i>Tier ${h.tier||'n/a'}</span></span>
+       <span class="k">Mapping</span><span class="v">${h.mapping_type}</span>
+        ${h.tier_reason?`<span class="k">Tier reason</span><span class="v">${h.tier_reason}</span>`:''}
+     </div>
+     <div class="mnote">${MAPPING_DESC[h.mapping_type]||''}${h.note?'<br>'+h.note:''}</div>
+     <div class="msec">Skills</div>${skills}`;
+}
+</script>
+</body>
+</html>
