@@ -334,6 +334,111 @@ h("Rouie","萝伊","—","Support","Support","original","无CN对应","B")
 h("TeeMee","提米","太乙真人","Support","Support","direct","经济增益+复活","B")
 h("Zip","齐普","—","Support/Tank","Support","original","无CN对应","B")
 
+# AoV item -> (WZRY item, mapping_type, one-line EN reason)
+ITEMS_MAP = {
+  # Physic attack
+  "Short Sword": ("铁剑", "direct", "Same base attack-damage starter as WZRY's 铁剑 (+20 AD)."),
+  "Dagger": ("匕首", "direct", "Same base attack-speed starter (+10% AS)."),
+  "Gloves": ("搏击拳套", "direct", "Same base crit starter (+8% crit)."),
+  "Bloodied Club": ("吸血之镰", "direct", "Same base lifesteal starter (+8% phys lifesteal)."),
+  "Chain Hammer": ("迅捷长矛", "direct", "Same AD building block (WZRY's 迅捷长矛 +35 AD)."),
+  "Cleaving Claymore": ("风暴巨剑", "direct", "Same mid AD brick (WZRY's 风暴巨剑 +75 AD)."),
+  "Arcane Hammer": ("速击之枪", "loose", "Same AD+AS combo, but AoV adds on-hit movement speed — WZRY's 速击之枪 does not."),
+  "Tempest Blades": ("狂暴双刃", "loose", "AS+MS item; WZRY's 狂暴双刃 is the closest (15% AS + 7.5% MS)."),
+  "Astral Spear": ("陨星", "loose", "Armor-pen spear; in WZRY you build toward 碎星锤 via 陨星 instead."),
+  "Shuriken": ("末世", "loose", "Early on-hit damage; the full on-hit item in WZRY is 末世."),
+  "Chaos Bow": ("穿云弓", "loose", "Ranged-only pen bow; WZRY's ranged special is 穿云弓 (AS+crit instead of pen)."),
+  "Longinus' Spear": ("暗影战斧", "direct", "Near-identical: AD + CDR + HP + armor pen (WZRY's 暗影战斧)."),
+  "Fafnir's Talon": ("末世", "direct", "Same kit: AD + AS + lifesteal + on-hit % current HP damage."),
+  "Claves Sancti": ("无尽战刃", "direct", "Ranged crit finisher: AD + crit + crit damage, like 无尽战刃."),
+  "Muramasa": ("暗影战斧", "direct", "AD + CDR + HP + % armor pen — the classic 暗影战斧 shape."),
+  "The Beast": ("制裁之刃", "direct", "Lifesteal + low-HP self-recovery, same idea as 制裁之刃's 回魂."),
+  "Omni Arms": ("宗师之力", "direct", "Same passive: after a skill, next attack hits extra — 宗师之力's 强击."),
+  "Slikk's Sting": ("影刃", "direct", "AS + crit + MS with crit on-hit — 影刃's territory."),
+  "Fenrir's Tooth": ("强者破军", "direct", "Big AD + bonus damage vs targets below 50% HP — that's 破军."),
+  "Blitz Blade": ("闪电匕首", "direct", "AS + chain-lightning on-hit, identical to 闪电匕首's 电弧."),
+  "Devil's Handshake": ("影刃", "direct", "Stacking AS on-hit — 影刃's 暴风 passive, same concept."),
+  "Rankbreaker": ("碎星锤", "direct", "AD + flat armor pen; WZRY's 碎星锤 is the pen bruiser item."),
+  "Uriel's Brand": ("破魔刀", "direct", "Attack + magic defense hybrid with low-HP shield — 破魔刀's niche."),
+  "Curse of Death (Item)": ("暗影战斧", "loose", "Same AD+CDR+HP stats as 暗影战斧, but its max-HP shred passive has no WZRY match."),
+  "Death Sickle": ("名刀·司命", "direct", "Near-identical: near-death invincibility burst — 名刀·司命's 暗幕."),
+  "Bow of Slaughter": ("逐日之弓", "loose", "Ranged crit bow; the lifesteal-on-kill active is AoV-only."),
+  "Dawnning Star": ("仁者破晓", "direct", "Ranged-doubled on-hit bonus — same design as 破晓's 普攻伤害提升."),
+  "Frost Hammer": ("冰痕之握", "direct", "Slow on-hit after attacks/skills — 冰痕之握's 强击 slow."),
+  # Magic attack
+  "Spell Tome": ("咒术典籍", "direct", "Same base AP starter."),
+  "Lapis Ring": ("蓝宝石", "direct", "Same base mana starter (+400 mana in WZRY)."),
+  "Pendant of Faith": ("—", "original", "Pure mana-regen starter — WZRY has no equivalent basic item."),
+  "Ancient Scriptures": ("圣者法典", "direct", "Same mid AP brick (WZRY's 圣者法典 +60 AP + CDR)."),
+  "Enchanted Scroll": ("大棒", "direct", "Same pure-AP brick (+120 AP)."),
+  "Trick Blade": ("巫术法杖", "loose", "Skill-then-next-attack passive — WZRY moved it to 巫术法杖 (magic, bigger)."),
+  "Spoopy Mask": ("日暮之流", "loose", "AP + magic pen; WZRY's on-hit pen item is 日暮之流."),
+  "Phoenix Tear": ("时之预言", "direct", "Same level-up HP/mana restore passive — 时之预言's 英勇奖赏."),
+  "Virtue's Bracelet": ("圣者法典", "direct", "AP + CDR + regen brick, 圣者法典's role."),
+  "Vlad's Impaler": ("血族之书", "direct", "AP + 12% magic lifesteal — same as 血族之书."),
+  "Carano's Vow": ("炽热支配", "direct", "Low-HP cleanse + shield + lifesteal, near-identical to 炽热支配."),
+  "Boomstick": ("回响之杖", "direct", "Skill-hit AoE explosion — 回响之杖's 回响, same numbers ballpark."),
+  "Hecate's Diadem": ("博学者之怒", "direct", "Big-AP finisher with bonus % AP — that's 博学者之怒."),
+  "Orb of the Magi": ("贤者天书", "loose", "Stacks AP/HP over time + level-up restore; closest WZRY scaler is 贤者天书."),
+  "Rhea's Blessing": ("噬神之书", "direct", "AP + ~24% magic lifesteal + lifesteal-to-CDR conversion — same item concept."),
+  "Zweihander": ("金色圣剑", "direct", "AP + stacking AS on-hit — 金色圣剑's 圣剑 passive."),
+  "Frosty's Revenge": ("凝冰之息", "direct", "AP + slow on hit — 凝冰之息's 凝冰 slow."),
+  "Berith's Agony": ("痛苦面具", "direct", "Skill applies % current-HP DoT — 痛苦面具's 折磨, same mechanic."),
+  "Apocalypse": ("巫术法杖", "direct", "AP + CDR + skill-then-next-attack bonus — 巫术法杖's 强击."),
+  "Soaring Aura": ("日暮之流", "direct", "Stacks a bonus on hitting heroes — 日暮之流's 净魔 stacks, same design."),
+  "Holy of Holies": ("贤者天书", "direct", "+0.5% damage per 100 AP — identical to 贤者天书's 刻印."),
+  "Arctic Orb": ("辉月", "direct", "Active invincibility + lifesteal — 辉月's 月之守护, same kit."),
+  "Frost Guard": ("时之预言", "loose", "AP + stacking armor/magic defense — WZRY's defense stacker is 时之预言."),
+  "Virtue's Necklace": ("圣杯", "direct", "AP + CDR + mana regen — 圣杯's mana-sustain role."),
+  "Mage Robe": ("破茧之衣", "direct", "AP + HP + HP-to-AP + pen — 破茧之衣, near-identical."),
+  "Staff of Nuul": ("虚无法杖", "direct", "AP + CDR + 40% magic pen — 虚无法杖 (45% pen), same job."),
+  "Evil Secrets": ("虚无法杖", "loose", "Flat magic pen instead of percent — WZRY's pen finisher is 虚无法杖 (45%)."),
+  "Tome of the Reaper": ("痛苦面具", "direct", "AP + CDR + HP + soul DoT on hit — 痛苦面具's role."),
+  # Defense
+  "Ring of Vitality": ("红玛瑙", "direct", "Same base HP starter (+300 HP)."),
+  "Light Armor": ("布甲", "direct", "Same base armor starter."),
+  "Gladiator's Gauntlets": ("抗魔斗篷", "direct", "Same base magic-defense starter."),
+  "Talisman of Strength": ("—", "original", "Standalone HP-regen basic — WZRY has no such starter."),
+  "Necklace of Vitality": ("力量腰带", "direct", "Mid HP brick, 力量腰带's role."),
+  "Greaves of Protection": ("力量腰带", "direct", "Bigger HP brick — same 力量腰带 build path."),
+  "Heart of Incubus": ("红莲斗篷", "direct", "Armor + burn aura — 红莲斗篷's 业炎."),
+  "Belt of Clarity": ("魔女斗篷", "direct", "Magic def + HP + damage-mitigation, 魔女斗篷's role."),
+  "Platinum Gauntlets": ("雪山圆盾", "direct", "Armor + CDR brick — 雪山圆盾, same stats shape."),
+  "Knight's Plate": ("不祥征兆", "direct", "Slows the attacker's AS when hit — 不祥征兆's 寒铁."),
+  "Mantle of Ra": ("红莲斗篷", "direct", "Armor + HP + burn aura — 红莲斗篷 again, the full version."),
+  "Shield of the Lost": ("不祥征兆", "direct", "Slow/AS-reduce attacker on hit — 不祥征兆, same idea."),
+  "The Aegis": ("不祥征兆", "loose", "Same tank stats, but the AoE attack-speed slow is unique to AoV."),
+  "Gaia's Standard": ("永夜守护", "direct", "Magic def + burst-damage healing — 永夜守护's 守护."),
+  "Medallion of Troy": ("魔女斗篷", "direct", "Magic def + CDR + magic shield — 魔女斗篷's 迷雾 shield."),
+  "Blade of Eternity": ("贤者的庇护", "direct", "Once-per-game revive — 贤者的庇护's 复生."),
+  "Frost Cape": ("冰痕之握", "direct", "Skill-then-slow-next-attack — 冰痕之握, physical tank version."),
+  "Amulet of Longevity": ("霸者重装", "direct", "Out-of-combat HP regen — 霸者重装's 复苏, same mechanic."),
+  "Rock Shield": ("旭日初光", "loose", "Active personal shield; WZRY's shield generators are 旭日初光/极寒风暴, no exact match."),
+  "Mail of Pain": ("反伤刺甲", "direct", "Armor + damage thorn reflect — 反伤刺甲's 反刺."),
+  "Hercules' Madness": ("暴烈之甲", "direct", "AD + armor + low-HP shield, 暴烈之甲's tank-hybrid role."),
+  "Odin's Will": ("暴烈之甲", "loose", "Stacks damage/MS when hit — 暴烈之甲's 无畏 stacking, same design family."),
+  # Movement
+  "Boots of Speed": ("神速之靴", "direct", "Base movement boots (+30 MS), freely switchable — same as WZRY."),
+  "Sonic Boots": ("影忍之足", "direct", "Armor + MS + phys damage reduction — 影忍之足, identical."),
+  "Gilded Greaves": ("抵抗之靴", "direct", "Magic def + MS + CC resist — 抵抗之靴, identical."),
+  "Flashy Boots": ("冷静之靴", "direct", "CDR boots — 冷静之靴, same thing."),
+  "Enchanted Kicks": ("秘法之靴", "direct", "Magic-pen boots — 秘法之靴, same role."),
+  "War Boots": ("急速战靴", "direct", "AS boots + on-hit regen — 急速战靴, identical."),
+  "Hermes' Select": ("疾步之靴", "direct", "HP + big MS + out-of-combat speed — 疾步之靴, identical."),
+  # Jungling
+  "Kukri": ("狩猎宽刃", "direct", "Jungle starter — 狩猎宽刃, same entry item."),
+  "Monster's Bane": ("游击弯刀", "direct", "AP jungle item (+40 AP + jungle dmg) — 游击弯刀, identical."),
+  "Gnoll Cleaver": ("巡守利斧", "direct", "HP jungle item (+400 HP + burn) — 巡守利斧, identical."),
+  "Mr. Stabby": ("追击刀锋", "direct", "AD jungle item (+25 AD) — 追击刀锋, identical."),
+  "Whispering Wind": ("追击刀锋", "loose", "AS jungle item — WZRY has no AS jungle slot, use 追击刀锋."),
+  "Loki's Curse": ("符文大剑", "direct", "AP jungle finisher (+AP + CDR) — 符文大剑, same tier."),
+  "Leviathan": ("巨人之握", "direct", "HP jungle finisher (+1200 HP + CDR) — 巨人之握, same tier."),
+  "Soulreaver": ("贪婪之噬", "direct", "AD jungle finisher (+90 AD + CDR) — 贪婪之噬, same tier."),
+  "Scorching Wind": ("贪婪之噬", "loose", "AS + lifesteal jungle item — no WZRY equivalent, closest is 贪婪之噬."),
+  # Support
+  "Elemental Gem": ("学识宝石", "direct", "Roving support gem — 学识宝石, same experience/gold-share idea."),
+}
+
 # one-line reason for each hero's tier
 TIER_REASON = {
   # TANK
@@ -487,3 +592,22 @@ js = "const HEROES = " + json.dumps(H, ensure_ascii=False, indent=1) + ";\n"
 js += "const ROLES = " + json.dumps(ROLES, ensure_ascii=False) + ";\n"
 open(OUT+"/heroes.js","w",encoding="utf-8").write(js)
 print("wrote heroes.js", os.path.getsize(OUT+"/heroes.js"))
+
+# ---------- ITEMS ----------
+if os.path.exists(OUT + "/items.json"):
+    items = json.load(open(OUT + "/items.json", encoding="utf-8"))
+    imap = json.load(open(OUT + "/items_iconmap.json", encoding="utf-8")) if os.path.exists(OUT + "/items_iconmap.json") else {}
+    for it in items:
+        m = ITEMS_MAP.get(it["name"])
+        if not m:
+            print("WARN: no mapping for item", it["name"])
+            continue
+        wzry_cn, mtype, reason = m
+        it["wzry_cn"] = wzry_cn
+        it["wzry_display"] = wzry_cn if wzry_cn != "—" else "No WZRY equivalent"
+        it["mapping_type"] = mtype
+        it["reason"] = reason
+        it["icon"] = imap.get(it.get("icon_file", ""), "")
+    ijs = "const ITEMS = " + json.dumps(items, ensure_ascii=False, indent=1) + ";\n"
+    open(OUT + "/items.js", "w", encoding="utf-8").write(ijs)
+    print("wrote items.js", os.path.getsize(OUT + "/items.js"), "items:", len(items))

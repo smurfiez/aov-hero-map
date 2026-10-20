@@ -1,0 +1,762 @@
+[
+ {
+  "name": "Short Sword",
+  "type": "Physic attack",
+  "level": "Lvl 1",
+  "price": "250",
+  "desc": "+20 Attack Damage",
+  "icon_file": "Short_Sword.png"
+ },
+ {
+  "name": "Dagger",
+  "type": "Physic attack",
+  "level": "Lvl 1",
+  "price": "290",
+  "desc": "+10% Attack Speed",
+  "icon_file": "Dagger.png"
+ },
+ {
+  "name": "Gloves",
+  "type": "Physic attack",
+  "level": "Lvl 1",
+  "price": "300",
+  "desc": "+8% Critical Chance",
+  "icon_file": "Gloves.png"
+ },
+ {
+  "name": "Bloodied Club",
+  "type": "Physic attack",
+  "level": "Lvl 1",
+  "price": "410",
+  "desc": "+10 Attack Damage\n+8% Life Steal",
+  "icon_file": "Bloodied_club.png"
+ },
+ {
+  "name": "Chain Hammer",
+  "type": "Physic attack",
+  "level": "Lvl 1",
+  "price": "450",
+  "desc": "+40 Attack Damage",
+  "icon_file": "Chainhammer.png"
+ },
+ {
+  "name": "Cleaving Claymore",
+  "type": "Physic attack",
+  "level": "Lvl 2",
+  "price": "910",
+  "desc": "+80 Attack Damage",
+  "icon_file": "Cleaving_claymore.png"
+ },
+ {
+  "name": "Arcane Hammer",
+  "type": "Physic attack",
+  "level": "Lvl 2",
+  "price": "740",
+  "desc": "+25 Attack Damage\n+15% Attack Speed\n\nUnique Passive - Speed Up: Normal attacks increase movement speed by 10%.",
+  "icon_file": "Arcane_hammer.png"
+ },
+ {
+  "name": "Tempest Blades",
+  "type": "Physic attack",
+  "level": "Lvl 2",
+  "price": "780",
+  "desc": "+25% Attack Speed\n+5% Movement Speed",
+  "icon_file": "Tempest_Blades.png"
+ },
+ {
+  "name": "Astral Spear",
+  "type": "Physic attack",
+  "level": "Lvl 2",
+  "price": "830",
+  "desc": "+50 Attack Damage\n\n Unique Passive - Armor Reduction: Armor Pierce +60",
+  "icon_file": "Astral_Spear.png"
+ },
+ {
+  "name": "Shuriken",
+  "type": "Physic attack",
+  "level": "Lvl 2",
+  "price": "750",
+  "desc": "+20% Attack Speed\n\n Unique Passive - Vital Point: Normal attacks deal an additional 21~35 (melee) or 42~70 (ranged) physical damage , Cooldown: 0.3s.",
+  "icon_file": "Shuriken.png"
+ },
+ {
+  "name": "Chaos Bow",
+  "type": "Physic attack",
+  "level": "Lvl 2",
+  "price": "1100",
+  "desc": "+40 Attack Damage\n+10% Attack Speed\n\nUnique Passive - Stab: Increases armor penetration by 10% (doubled for ranged heroes)",
+  "icon_file": "Bow_of_Chaos.png"
+ },
+ {
+  "name": "Longinus' Spear",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2030",
+  "desc": "+80 Attack Damage\n+15% Cooldown Reduction\n +500 Max HP\n\nUnique Passive - Armor Reduction: Armor Pierce +60\n\nUnique Passive - Shatter: Each attack reduces target armor by 6% in 5s, up to 4 stacks. \n(Cooldown: 0.3s)",
+  "icon_file": "Spear_of_longinus.png"
+ },
+ {
+  "name": "Fafnir's Talon",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2040",
+  "desc": "+60 Attack Damage\n+30% Attack Speed +10% Lifesteal\n\nUnique Passive - Dragon's Breath: Normal attacks deal additional physical damage equal to 8% of target's current HP (max damage dealt to wildings: 80). Cooldown: 0.3s.",
+  "icon_file": "Fafnir_s_talon.png"
+ },
+ {
+  "name": "Claves Sancti",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2120",
+  "desc": "+100 Attack Damage\n\n Unique Passive - Gift of the Swift: Increases hero's movement speed by 3-45 for 1.5s after landing a critical hit. Only usable by ranged heroes.\n\nUnique Passive: +25% Critical Chance\n\nUnique Passive: +40% Critical Damage",
+  "icon_file": "Claves_sancti.png"
+ },
+ {
+  "name": "Muramasa",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2020",
+  "desc": "+80 Attack Damage\n+10% CD reduction\n\n+500 Max HP\n\nUnique Passive - Stab: Armor Pierce +35%",
+  "icon_file": "Muramasa.png"
+ },
+ {
+  "name": "The Beast",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "1800",
+  "desc": "+100 Attack Damage\n+25% Life steal\n+600 Max \n\n Unique Passive - Blood Curse: \n\nWhen HP drops below 30%, restores 400 - 610 HP over 5s.Cooldown: 20s.",
+  "icon_file": "The_beast.png"
+ },
+ {
+  "name": "Omni Arms",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2150",
+  "desc": "+70 Attack Damage\n+15% Attack Speed\n +10% Cooldown Reduction\n +600 Max HP\n\nUnique Passive - Elemental Power: After using a skill, the next normal attack in 5s deals additional physical damage equal to 100% attack damage . Cooldown: 2s.\n\nUnique Passive - Speed Up: Normal attacks increase movement speed by 10%.",
+  "icon_file": "Omni_Arms.png"
+ },
+ {
+  "name": "Slikk's Sting",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2150",
+  "desc": "+35% Attack Speed\n+25% Critical Chance +7% Movement Speed\n\nUnique Passive - Wind's Blessing: Increases a hero's resistance by 35% for 2s after landing a critical hit (cannot be stacked with Gilded Greaves). (Resistance: Reduces the duration of negative control effects such as decreased movement speed, silence, immobilize, knockup, knock back, stun, taunt, petrify, freeze, etc.)",
+  "icon_file": "Slikk_s_sting.png"
+ },
+ {
+  "name": "Fenrir's Tooth",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2800",
+  "desc": "+180 Attack Damage\n+5% Cooldown Reduction\n\n Unique Passive - Fenrir's Tooth: Deals an additional 30% damage when the target's HP is below 50%.",
+  "icon_file": "Fenrir_s_tooth.png"
+ },
+ {
+  "name": "Blitz Blade",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "1840",
+  "desc": "+35% Attack Speed +8% Movement Speed\nUnique Passive - Chain Lightning: Normal attacks deal 45-87 additional magic damage . Every 3 normal attack trigger a chain lightning, dealing 150-430 magic damage to one target and spreads to other target within range.Cooldown:0.3s",
+  "icon_file": "Blitz_blade.png"
+ },
+ {
+  "name": "Devil's Handshake",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "1960",
+  "desc": "+30% Attack Speed\n+20% Critical Chance\n +5% Movement Speed\n\nUnique Passive - Flame Wraith: Normal attacks increase attack speed by 10% for 2s. Stacks up to 5 times.",
+  "icon_file": "Devil_s_handshake.png"
+ },
+ {
+  "name": "Rankbreaker",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "1900",
+  "desc": "+110 Attack Damage \n\n Unique Passive - Wildwalk: Increases movement speed by 10% after exiting battle.\n\nUnique Passive - Break: Gains 40-180 armor penetration.",
+  "icon_file": "Rankbreaker.png"
+ },
+ {
+  "name": "Uriel's Brand",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2000",
+  "desc": "+80 Attack Damage \n+25% Attack Speed\n +200 Magic Defense\n\nUnique Passive - Magic Guardian: When HP falls below 40%, a shield will be activated to absorb 600~2000 magic damage, and resistance will be increased by 25% and movement speed will be increased by 30% for 5s. Cooldown: 75s.\n\nUnique Passive - Speed Up: Normmal attacks increase movement speed by 10%.",
+  "icon_file": "Uriel_s_brand.png"
+ },
+ {
+  "name": "Curse of Death (Item)",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "1900",
+  "desc": "+80 Attack Damage \n+10% Cooldown Reduction +800 Max HP\n\nUnique Passive - Soul Prison: Damage dealt by normal attacks and skills reduces the target's healing by 40% for 3 seconds.",
+  "icon_file": "Curse_of_death.png"
+ },
+ {
+  "name": "Death Sickle",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2000",
+  "desc": "+75 Attack Damage \n+15% Attack Speed\n\n+500 Max HP\n\nUnique Passive - Insatiable: Gains invincibility and temporary damage immunity and increases attack and movement speed by 25% for 0.75 second. (Cooldown: 120 seconds). After holding the item for 4 minutes, the effect lasts for 1.5 seconds.",
+  "icon_file": "Death_sickle.png"
+ },
+ {
+  "name": "Bow of Slaughter",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2250",
+  "desc": "+90 Attack Damage \n+10% Critical Chance\n +10% Lifesteal\n\nUnique Active - Bloodthirst : Increases life steal by 60% for 3s. Only usable by ranged heroes. Cooldown 60s.",
+  "icon_file": "Bow_of_Slaughter.png"
+ },
+ {
+  "name": "Dawnning Star",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2980",
+  "desc": "+50 Attack Damage \n+30% Attack Speed\n +10% Critical Chance\n\nUnique Passive - Dawning Star: Normal attacks deal an additional 50 physical damage (doubled for ranged heroes). Cooldown: 0.35s.\n\nUnique Passive - Stab: Increases armor penetration by 20% (doubled for ranged heroes).",
+  "icon_file": "Dawnbreaker.png"
+ },
+ {
+  "name": "Frost Hammer",
+  "type": "Physic attack",
+  "level": "Lvl 3",
+  "price": "2060",
+  "desc": "+ 60 Attack Damage\n+ 30% Attack Speed\n\n+ 900 Max HP\n\nUnique Passive - Frostbite: Normal attacks and skills reduce movement speed by 5%-10% for 1.5 seconds. Stacks up to 2 times.\n\nUnique Passive - Numbling Cold: Normal attacks and skills deal an additional 140-280 (+45% additional physical damage bonus ) physical damage to targets. Cooldown time. 3s \n \"A bone-chilling cold, piercing through to the marrow when subjected to control.\"",
+  "icon_file": "Frost_Hammer.png"
+ },
+ {
+  "name": "Spell Tome",
+  "type": "Magic attack",
+  "level": "Lvl 1",
+  "price": "300",
+  "desc": "+40 AP",
+  "icon_file": "Spell_Tome.png"
+ },
+ {
+  "name": "Lapis Ring",
+  "type": "Magic attack",
+  "level": "Lvl 1",
+  "price": "220",
+  "desc": "+300 Max Mana",
+  "icon_file": "Mana_Ring.png"
+ },
+ {
+  "name": "Pendant of Faith",
+  "type": "Magic attack",
+  "level": "Lvl 1",
+  "price": "120",
+  "desc": "+10 Mana Regen / 5s",
+  "icon_file": "Pendant_of_faith.png"
+ },
+ {
+  "name": "Ancient Scriptures",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "540",
+  "desc": "+80 AP",
+  "icon_file": "Ancient_scriptures.png"
+ },
+ {
+  "name": "Enchanted Scroll",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "820",
+  "desc": "+120 AP",
+  "icon_file": "Enchanted_Scroll.png"
+ },
+ {
+  "name": "Trick Blade",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "820",
+  "desc": "+40 AP\n+10% CD reduction\n\nPassive - Elemental Power: 5s after using a skill, the next normal attack deals (+0.3 AD) (+0.18 AP) magic damage , CD: 3s.\n This item should not be stacked with Omni Arms, Frost Cape.",
+  "icon_file": "Trick_Blade.png"
+ },
+ {
+  "name": "Spoopy Mask",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "960",
+  "desc": "+100 AP\n\nPassive - Extermination: +75 Magic Pierce.",
+  "icon_file": "Spoopy_mask.png"
+ },
+ {
+  "name": "Phoenix Tear",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "500",
+  "desc": "+50 AP\n\nPassive - From the Ashes: Leveling up restores 20% HP and 10% Mana within 3s.",
+  "icon_file": "Phoenix_tear.png"
+ },
+ {
+  "name": "Virtue's Bracelet",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "720",
+  "desc": "+60 AP\n+5% CD reduction\n 20 Mana Regen / 5s",
+  "icon_file": "Virtue_s_bracelet.png"
+ },
+ {
+  "name": "Vlad's Impaler",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "800",
+  "desc": "+80 AP\n+12% Magic Lifesteal.\n \"Always hungering to plunder the primal source of life.\"",
+  "icon_file": "Vlad's_Impaler.png"
+ },
+ {
+  "name": "Carano's Vow",
+  "type": "Magic attack",
+  "level": "Lvl 2",
+  "price": "2050",
+  "desc": "+180 AP\n+12% Magic Lifesteal\n\n+5% Movement Speed\n\nUnique Passive - Urgent Protection: Remove control effects when HP drops below 30%, and grants a 510-1000 ( +100% magic bonus +8% bonus HP ) shield that lasts for 4s, and increases movement speed by 30% for the duration. Cooldown time: 75s\n \"Master Dirak said this was a graduation gift.\"",
+  "icon_file": "Carano's_Vow.jpg"
+ },
+ {
+  "name": "Boomstick",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1800",
+  "desc": "+200 AP\n+5% Movement Speed\n\nPassive - Explosion: Target who is hit by skills takes 120 (+0.4 AP) magic damage around, CD: 5s.",
+  "icon_file": "Boomstick.png"
+ },
+ {
+  "name": "Hecate's Diadem",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2400",
+  "desc": "+240 AP\n\nPassive - Warlock: +35% AP.",
+  "icon_file": "Hecate_s_diadem.png"
+ },
+ {
+  "name": "Orb of the Magi",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1800",
+  "desc": "+140 AP\n+10% CD reduction\n\nPassive - Bide: Gain 12 AP and 120 max HP every 30s of the match, stack up to 10 times.\n\nPassive - From the Ashes: Leveling up restores 20% HP and 10% Mana within 3s.",
+  "icon_file": "Orb_of_the_magi.png"
+ },
+ {
+  "name": "Rhea's Blessing",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2050",
+  "desc": "+160 AP\n+25% Magic Lifesteal +800 Max HP\n\nPassive - Conversion: Every 2% Magic Life steal is converted into 1% Cooldown Reduction.\n \"An exploration into life that was sealed away for touching upon the forbidden.\"",
+  "icon_file": "Rhea_s_blessing.png"
+ },
+ {
+  "name": "Zweihander",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1900",
+  "desc": "+160 AP\n+20% Attack Speed\n +8% Movement Speed\n\nPassive - Rapid Blade: Normal attack hits increase 15% attack speed, stack up to 2 times, lasting for 4s.\n\nPassive - Twilight: Normal attacks deal additional 40 (+0.2 AP) magic damage .Cooldown: 0.35s",
+  "icon_file": "Zweihander.png"
+ },
+ {
+  "name": "Frosty's Revenge",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2020",
+  "desc": "+140 AP\n+850 Max HP\n +5% Movement Speed\n\nPassive - Frozen Heart: Abilities that deal damage will also slow them 20% for 2s.",
+  "icon_file": "Frosty_s_revenge.png"
+ },
+ {
+  "name": "Berith's Agony",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1800",
+  "desc": "+140 AP\n+10% CD reduction\n +600 Max HP\n\nPassive - Tortune: Skills deal additional 80 (+2% target's current HP) magic damage per second for 3s (max damage dealt to wildlings: 200) (CD: 3s).",
+  "icon_file": "Berith's_Agony.png"
+ },
+ {
+  "name": "Apocalypse",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1800",
+  "desc": "+180 AP\n+10% CD reduction\n +5% Movement Speed\n\nPassive - Elemental Power: After using a skill, the next normal attack in 5s deals additional (+0.3 AD) (+0.8 AP) magic damage , CD: 2s.\n This item should not be stacked with Omni Arms, Frost Cape, Loki's Curse.",
+  "icon_file": "Apocalypse.png"
+ },
+ {
+  "name": "Soaring Aura",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2100",
+  "desc": "+140 AP\n+10% CD reduction\n +600 Max HP\n\nPassive - Extermination: Skills and normal attack hitting the enemy hero will increase 10~24 (per hero level +1) magic armor pierce, stacking up to 10 times, lasting for 3s.",
+  "icon_file": "Soaring_aura.png"
+ },
+ {
+  "name": "Holy of Holies",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2610",
+  "desc": "+350 AP\n+10% Cooldown Speed\n\nPassive - Enlightenment: For every 100 Magic Power, increases damage dealt by 0.5% and decreases damage taken by 0.5%",
+  "icon_file": "Holy_of_Holies.png"
+ },
+ {
+  "name": "Arctic Orb",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2200",
+  "desc": "+220 AP\n+12% Magic Lifesteal\n\n Active - Impervious: Immune to all effects for 1.5s, but cannot move, attack, or use skills. After the immunity ends, grant a shield that absorbs 540~1100 (+0.5 AP) damage for 1s, CD: 75s.",
+  "icon_file": "Arctic_Orb.png"
+ },
+ {
+  "name": "Frost Guard",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2100",
+  "desc": "+140 AP\n+5% CD reduction\n +600 Max HP\n\nPassive - Ice Armor: Increase (+0.5 AP) armor and magic armor, max up to 230 points.",
+  "icon_file": "Frost_Guard.png"
+ },
+ {
+  "name": "Staff of Nuul",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2050",
+  "desc": "+180 AP\n+10% CD reduction\n\nPassive - Tranquil Soul: +40% Magic Pierce.",
+  "icon_file": "Staff_of_nuul.png"
+ },
+ {
+  "name": "Evil Secrets",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1980",
+  "desc": "+180 AP\n\nPassive - Extermination: +150 Magic Pierce.",
+  "icon_file": "Evil_Secrets.png"
+ },
+ {
+  "name": "Tome of the Reaper",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1900",
+  "desc": "+140 AP\n+10% CD reduction +600 Max HP\n\nPassive - Soul Prison: Dealing damage with basic attacks or skills reduces the target's healing recovery by 40% for 3 seconds. This item should not be stacked with Curse of Death. \n \"Dark mages, come join our Order of the Black Owl.\"",
+  "icon_file": "Tome_of_the_reaper.png"
+ },
+ {
+  "name": "Virtue's Necklace",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "1800",
+  "desc": "+160 AP\n+15% CD reduction\n +25 Mana Regen / 5s\n\nPassive - Wise: Restore 1% mana every second.",
+  "icon_file": "Virtue_s_necklace.png"
+ },
+ {
+  "name": "Mage Robe",
+  "type": "Magic attack",
+  "level": "Lvl 3",
+  "price": "2160",
+  "desc": "+120 AP\n+900 Max HP\n\nUnique Passive - Replenishment: Grant 26-40 (+2% additional HP) ability power, up to a max of 100\n\nPassive - Magic Pierce: Gain 32-60 (+3% additional HP) magic penetration, up to a max of 150 points.\n '''\"Presented to Liliana, my bosom friend.\"'''",
+  "icon_file": "Mage_Robe.jpg"
+ },
+ {
+  "name": "Ring of Vitality",
+  "type": "Defense",
+  "level": "Lvl 1",
+  "price": "300",
+  "desc": "+300 Max HP",
+  "icon_file": "Ring_of_Vitality.png"
+ },
+ {
+  "name": "Light Armor",
+  "type": "Defense",
+  "level": "Lvl 1",
+  "price": "220",
+  "desc": "+90 Armor",
+  "icon_file": "Light_Armor.png"
+ },
+ {
+  "name": "Gladiator's Gauntlets",
+  "type": "Defense",
+  "level": "Lvl 1",
+  "price": "220",
+  "desc": "+90 Magic Armor",
+  "icon_file": "Gladiatior's_Gauntlets.png"
+ },
+ {
+  "name": "Talisman of Strength",
+  "type": "Defense",
+  "level": "Lvl 1",
+  "price": "140",
+  "desc": "+30 HP Regen / 5s",
+  "icon_file": "Talisman_of_strength.png"
+ },
+ {
+  "name": "Necklace of Vitality",
+  "type": "Defense",
+  "level": "Lvl 1",
+  "price": "540",
+  "desc": "+600 Max HP",
+  "icon_file": "Necklace_of_Vitality.png"
+ },
+ {
+  "name": "Greaves of Protection",
+  "type": "Defense",
+  "level": "Lvl 2",
+  "price": "900",
+  "desc": "+1000 Max HP",
+  "icon_file": "Greaves_of_protection.png"
+ },
+ {
+  "name": "Heart of Incubus",
+  "type": "Defense",
+  "level": "Lvl 2",
+  "price": "720",
+  "desc": "+150 Armor\n\nPassive - Burn: Deals 50-78 magic damage to nearby enemies every second (deals 50% more damage to minions and wildlings).",
+  "icon_file": "Heart_of_incubus.png"
+ },
+ {
+  "name": "Belt of Clarity",
+  "type": "Defense",
+  "level": "Lvl 2",
+  "price": "1100",
+  "desc": "+110 Magic Armor\n+700 Max HP\n\nPassive - Restore: When taking damage, restore 4% self-max HP over 2s, CD: 15s.",
+  "icon_file": "Belt_of_clarity.png"
+ },
+ {
+  "name": "Platinum Gauntlets",
+  "type": "Defense",
+  "level": "Lvl 2",
+  "price": "660",
+  "desc": "+10% CD reduction\n+110 Armor",
+  "icon_file": "Platinum_gauntlets.png"
+ },
+ {
+  "name": "Knight's Plate",
+  "type": "Defense",
+  "level": "Lvl 2",
+  "price": "730",
+  "desc": "+210 Armor\n\nPassive - Spirit Bond: When taking damage, reduce the attacker's attack speed by 15%.",
+  "icon_file": "Knight_s_plate.png"
+ },
+ {
+  "name": "Mantle of Ra",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2060",
+  "desc": "+225 Armor\n+1000 Max HP\n+60 HP Regen / 5s\n\nUnique Passive - Burn: Deal (+2% self-max HP) magic damage to nearby enemies within 2.5m every second (deal 50% more damage to minions and wildlings).\n\nUnique Passive - Incinerate: Enemies who was dealt damage on by this item's Burn passive are reduced their healing effects by 40% within 3 seconds. This item should not be stacked with Gnoll Cleaver, Leviathan. \n \"His battle armor also incinerates all living things.\"",
+  "icon_file": "Mantle_of_ra.png"
+ },
+ {
+  "name": "Shield of the Lost",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2100",
+  "desc": "+275 Armor\n+1200 Max HP\n\nPassive - Spirit Bond: When taking damage, reduce attacker's speed by 30% and movement speed by 15% for 2s.",
+  "icon_file": "Shield_of_the_Lost.png"
+ },
+ {
+  "name": "The Aegis",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2180",
+  "desc": "+360 Armor\n+400 Max mana \n +20% CD reduction\n\nPassive - Enhanced Spirit Bond: Reduces the attack speed of enemies within 5m by 30%.",
+  "icon_file": "The_aegis.png"
+ },
+ {
+  "name": "Gaia's Standard",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2180",
+  "desc": "+200 Magic Armor\n+1200 Max HP\n\nPassive - Restore: When taking damage, restore 4% self-max HP over 2s, CD: 10s.\n\nUnique Passive: For each your 10% lost HP, your healing effect is increased by 5%\n \"A treasure from the Elborne River, protecting the companions of Mother Nature.\"",
+  "icon_file": "Gaia's_Standard.png"
+ },
+ {
+  "name": "Medallion of Troy",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2320",
+  "desc": "+10% CD reduction\n+200 Magic Armor\n +1000 Max HP\n\nPassive - Rispote: Gain a shield that absorbs 460-1300 magic damage when out of battle.\n\n Passive - Reconciliation: Gain 8-112 Magic Armor (increase with hero level)",
+  "icon_file": "Medallion_of_troy.png"
+ },
+ {
+  "name": "Blade of Eternity",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2400",
+  "desc": "+120 Armor\n\nPassive - Nirvana: Resurrect 2s after death and return with 2000-3500 HP, CD: 150s. (This skill can only be triggered up to 2 times in the same match) \n\n Passive - Fighting Spirit: Increase damage dealt by 10%.",
+  "icon_file": "Blade_of_Eternity.png"
+ },
+ {
+  "name": "Frost Cape",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "1970",
+  "desc": "+10% CD reduction\n+200 Armor\n +800 Max HP\n\nPassive - Elemental Power: After using a skill, the next normal attack slows 30% (only 20% for ranged heroes) for 0.5s and deals 100 (+0.3 AD) physical damage to an area, CD: 0.65s.\n This item should not be stacked with Omni Arms, Apocalypse, Loki's Curse.",
+  "icon_file": "Frost_cape.png"
+ },
+ {
+  "name": "Amulet of Longevity",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2190",
+  "desc": "+150 Armor\n+100 Magic \n\n+1500 Max HP\n\nPassive - Longevity: Recover 1% of max HP every 2 seconds. Restoration effect becomes 4% when not attacked by heroes or towers for 3 seconds.\n \"Inscribed upon the amulet: 'Leave combat, accelerate recovery.'\"",
+  "icon_file": "Amulet_of_longevity.png"
+ },
+ {
+  "name": "Rock Shield",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "1980",
+  "desc": "+240 Armor\n+1200 Max HP\n\n Active - Rock Shield: Grant a shield (30% self-Max HP + 10% self-Lost HP) for 3 seconds. While shield is active, damage dealt is reduced by 70%. CD: 60s.\n \"Power from Mother Earth amplifies the user's resilience to the absolute limit.\"",
+  "icon_file": "Rock_Shield.png"
+ },
+ {
+  "name": "Mail of Pain",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "1940",
+  "desc": "+300 Armor\n+1200 Max HP\n\nPassive - Riposte: 15% of the physical damage taken is deflected to the enemy as magic damage (calculation is based on damage before damage reduction) .",
+  "icon_file": "Mail_of_pain.png"
+ },
+ {
+  "name": "Hercules' Madness",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "2000",
+  "desc": "+80 AD\n+240 Armor\n\nPassive - Berserk: When HP is below 40%, increase 20% lifesteal (only apply for melee heroes) and gain a shield that absorbs 880-2000 damage for 8s. CD: 60s.",
+  "icon_file": "Hercules_madness.png"
+ },
+ {
+  "name": "Odin's Will",
+  "type": "Defense",
+  "level": "Lvl 3",
+  "price": "1900",
+  "desc": "+225 Armor\n+1200 Max HP +5% Movement Speed\n\nPassive - Adrenaline: When taking damage, gain a stack of buff. Each stack increases 1% movement speed and deals 2% additional damage, stacks up to 5 times and lasting for 3s.",
+  "icon_file": "Odin's_Will.png"
+ },
+ {
+  "name": "Boots of Speed",
+  "type": "Movement",
+  "level": "Lvl 1",
+  "price": "250",
+  "desc": "Passive: +30 Movement Speed\n\n Level 2 shoes can be switched freely, with a 3-minute cooldown time between switches.",
+  "icon_file": "Boots_of_speed.png"
+ },
+ {
+  "name": "Sonic Boots",
+  "type": "Movement",
+  "level": "Lvl 2",
+  "price": "700",
+  "desc": "+110 Armor\n\n Passive: +60 Movement Speed\n Passive: Reduce 10% physical damage taken.",
+  "icon_file": "Sonic_boots.png"
+ },
+ {
+  "name": "Gilded Greaves",
+  "type": "Movement",
+  "level": "Lvl 2",
+  "price": "700",
+  "desc": "+90 Magic Armor\n\n Passive: +60 Movement Speed Passive: +35% resistance . Resistance : Reduce the duration of negative control effects such as stun, decreased movement speed, silence, knock up and so on. This item should not be stacked with Slikk's Sting.",
+  "icon_file": "Gilded_greaves.png"
+ },
+ {
+  "name": "Flashy Boots",
+  "type": "Movement",
+  "level": "Lvl 2",
+  "price": "700",
+  "desc": "+15% CD Reduction\n\n Passive: +60 Movement Speed Passive: Reduce additional 15% CD of Talents.",
+  "icon_file": "Flashy_boots.png"
+ },
+ {
+  "name": "Enchanted Kicks",
+  "type": "Movement",
+  "level": "Lvl 2",
+  "price": "700",
+  "desc": "Passive: +60 Movement Speed\n\n Passive: +100 Magic Pierce.",
+  "icon_file": "Enchanted_kicks.png"
+ },
+ {
+  "name": "War Boots",
+  "type": "Movement",
+  "level": "Lvl 2",
+  "price": "700",
+  "desc": "+20% Attack Speed\n\n Passive: +60 Movement Speed Passive: Hitting an enemy restores 20 HP per hit (half for non-hero targets).",
+  "icon_file": "War_boots.png"
+ },
+ {
+  "name": "Hermes' Select",
+  "type": "Movement",
+  "level": "Lvl 2",
+  "price": "700",
+  "desc": "+300 Max HP\n\n Passive: +70 Movement Speed Passive - Swift: Increase 70 Movement Speed when out-of-battle.",
+  "icon_file": "Hermes_select.png"
+ },
+ {
+  "name": "Kukri",
+  "type": "Jungling",
+  "level": "Lvl 1",
+  "price": "250",
+  "desc": "Punish talent acquired to buy \n (Once 2nd or 3rd tier jungling equipment is purchased, the Punish talent will become Frostbite. Frostbite deals 1350~2750 true damage to a non-hero and slows them 50% for 2s)\n If Frostbite hits an enemy hero, it deals 200~410 (+15 per hero level) true damage , and its non-hero damage and effect also spreads to a wildling nearby. \n\nPassive - Hunter: Normal attacks / skills hitting the wildling will deal 50-120 additional true damage every 0.5s for 2s, and receive 20% more EXP from killing monsters.\n Passive - Modest: When near an ally hero, the ally hero gains 100% gold and EXP from Minions, while you only gain 50%. This effect is removed after 4 minutes. Also, damage dealt on enemies minions is reduced by 25% ( removed after 4 minutes ).",
+  "icon_file": "Kukri.png"
+ },
+ {
+  "name": "Monster's Bane",
+  "type": "Jungling",
+  "level": "Lvl 2",
+  "price": "750",
+  "desc": "+40 AP\n\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\nPassive - Hunter: Normal attacks / skills hitting the wildling will deal 60~172 additional true damage every 0.5s for 2s, and receive 35% more EXP from killing monsters.\n\nPassive - Wild: Gain 4 AP and 0.2% CD reduction for every monster killed, max stack up to 15 times.",
+  "icon_file": "Monsters_bane.png"
+ },
+ {
+  "name": "Gnoll Cleaver",
+  "type": "Jungling",
+  "level": "Lvl 2",
+  "price": "750",
+  "desc": "+400 Max HP\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\nPassive - Burn: Deal 50~78 magic damage to nearby enemies within 2.5m every second (deal 100% more damage to minions and monsters).\n\nPassive - Hunter: Normal attacks / skills hitting the wildling will deal 60~172 additional true damage every 0.5s for 2s, and receive 35% more EXP from killing monsters.\n\nPassive - Wild: Increase 25 Max HP and 0.2% CD reduction for every monster killed, max stack up to 15 times.",
+  "icon_file": "Gnoll_cleaver.png"
+ },
+ {
+  "name": "Mr. Stabby",
+  "type": "Jungling",
+  "level": "Lvl 2",
+  "price": "750",
+  "desc": "+25 AD\n\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\nPassive - Hunter: Normal attacks / skills hitting the wildling will deal 60~172 additional true damage every 0.5s for 2s, and receive 35% more EXP from killing monsters.\n\nPassive - Wild: Increase 2 AD and 0.2% CD reduction for every monster killed, max stack up to 15 times.",
+  "icon_file": "Mr._Stabby.png"
+ },
+ {
+  "name": "Whispering Wind",
+  "type": "Jungling",
+  "level": "Lvl 2",
+  "price": "750",
+  "desc": "+12% Attack Speed\n\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\nPassive - Hunter: Normal attacks / skills hitting the wildling will deal 60~172 additional true damage every 0.5s for 2s, and receive 35% more EXP from killing monsters.\n\nPassive - Wild: Increase 0.8% Attack Speed and 0.2 Life Steal for every monster killed, max stack up to 15 times.",
+  "icon_file": "Whispering_Wind.png"
+ },
+ {
+  "name": "Loki's Curse",
+  "type": "Jungling",
+  "level": "Lvl 3",
+  "price": "1750",
+  "desc": "+150 AP\n+5% CD reduction\n\n+7% Movement Speed\n\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\n(Passive - Hunter at Lv2 effect)\n\nPassive - Elemental Power: After using a skill, the next normal attack in 5s deals additional (+0.35 AD) (+0.5 AP) magic damage , CD: 2s.\n\nPassive - Wild: Gain 4 AP and 0.2 CD reduction for every monster killed, max stack up to 25 times.\n\n This item should not be stacked with Omni Arms, Apocalypse, Frost Cape.",
+  "icon_file": "Loki_s_curse.png"
+ },
+ {
+  "name": "Leviathan",
+  "type": "Jungling",
+  "level": "Lvl 3",
+  "price": "1750",
+  "desc": "+5% CD reduction\n+1200 Max HP\n\n+6% Movement Speed\n\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\n(Passive - Hunter at Lv2 effect)\n\nPassive - Burn: Deal (+2% self-max HP) magic damage to nearby enemies within 2.5m every second (deal 100% more damage to minions and monsters).\n\nPassive - Wild: Increase 25 Max HP and 0.2% CD reduction for every monster killed, max stack up to 25 times.\n\n This item should not be stacked with Mantle of Ra.",
+  "icon_file": "Leviathan.png"
+ },
+ {
+  "name": "Soulreaver",
+  "type": "Jungling",
+  "level": "Lvl 3",
+  "price": "1750",
+  "desc": "+90 AD\n+5% CD reduction\n\n+8% Movement Speed\n\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\n(Passive - Hunter at Lv2 effect)\n\nPassive - Armor Smasher: +60 Armor Pierce.\n\nPassive - Wild: Increase 2 AD and 0.2% CD reduction for every monster killed, max stack up to 25 times.",
+  "icon_file": "Soulreaver.png"
+ },
+ {
+  "name": "Scorching Wind",
+  "type": "Jungling",
+  "level": "Lvl 3",
+  "price": "1750",
+  "desc": "+30% Attack Speed\n +15% Lifesteal\n\n+7% Movement Speed\n\n(Grants Frostbite talent)\n\n(Passive - Modest effect)\n\n(Passive - Hunter at Lv2 effect)\n\nPassive - Fire Storm: Normal attacks place a mark on the target, dealing 15~19 magic damage each stack, up to 6 stacks. CD: 0.3s.\n\nPassive - Wild: Increase 0.8% Attack Speed and 0.2% Life Steal for every monster killed, max stack up to 25 times.",
+  "icon_file": "Scorching_Wind.png"
+ },
+ {
+  "name": "Elemental Gem",
+  "type": "Support",
+  "level": "Lvl 1",
+  "price": "300",
+  "desc": "+5% Movement Speed\n\nPassive - Up-and-Coming: Every 3 seconds, grants 6 experience and 6 gold to the teammate with the lowest gold on the team.\n\nPassive - Modest: The ally hero nearby earns 100% Gold and EXP from minions and monsters while you only get 30~50% (Increases over time, reaching maximum at 13 minutes of match) . This effect will last as ever throughout the match.\n \"A magical gemstone containing multiple elements, it is the most common experimental object in the Magic Academy.\"",
+  "icon_file": "Elemental_Gem.png"
+ }
+]
